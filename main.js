@@ -1,35 +1,39 @@
-alert('Bienvenido a Bebidas Carolinas, tu distribuidora favorita')
+// (crear funcion)
+function bienvenida(){
+    alert ('Bienvenido a Bebidas Carolinas, tu distribuidora favorita');
+    console.log ("Bienvenido a Bebidas Carolinas, tu distribuidora favorita");
+}
+// (llamado funcion)
+bienvenida()
 
-let edad = parseInt(prompt('Ingrese su edad'));
-if (edad > 17) {
+let entrada = parseInt(prompt("¡Ingresa un n° del 1 al 10 para ganar un descuento!"));
+switch (entrada) {
+   case "7":
+      alert("Felicidades! Ganó un %10 de descuento en su compra!");
+      break;
+   default:
+      alert("Lo sentimos, pruebe suerte de nuevo mañana ;)")
+      break;
+}
+
+const edad = prompt('Ingrese su edad');
+const mayoria = parseInt(edad) > 17
+if (mayoria) {
     alert('Disfruten de nuestra web')
 }
 else {
-    alert('Lo sentimos no podras comprar en nuestra web')
-}
-let entrada = prompt("Desea ver precio de bebidas con o sin alcohol?");
-switch (entrada) {
-    case "con":
-        alert("Bebidas con alcohol a partir de $500");
-        break;
-    case "sin":
-        alert("Bebidas sin alcohol a partir de $500");
-        break;
-    default:
-        alert("Por favor, solo responda: con o sin")
-        break;
+    alert('Le informamos que no podrá acceder a comprar bebidas con alcohol')
 }
 
-// ------------------------------------
-function aplicarDescuento(precioAlcohol, porcentajeDescuento) {
-    const montoADescontar = precioAlcohol / 100 * porcentajeDescuento
-    const precioFinal = precioAlcohol - montoADescontar
-    return precioFinal
-  }
-//   ----------------------------------------
-const precioAlcohol = parseFloat(prompt('ingrese el monto inicial'))
-const porcentajeDescuento = parseFloat(prompt('ingrese el descuento a aplicar'))
+// function aplicarDescuento(precioAlcohol, porcentajeDescuento) {
+//     const montoADescontar = precioAlcohol / 100 * porcentajeDescuento
+//     const precioFinal = precioAlcohol - montoADescontar
+//     return precioFinal
+//   }
+// //   ----------------------------------------
+// const precioAlcohol = parseFloat(prompt('ingrese el monto inicial'))
+// const porcentajeDescuento = parseFloat(prompt('ingrese el descuento a aplicar'))
 
-const resultado = aplicarDescuento(precioAlcohol, porcentajeDescuento)
-alert(resultado)
+// const resultado = aplicarDescuento(precioAlcohol, porcentajeDescuento)
+// alert(resultado)
 alert('Gracias')
