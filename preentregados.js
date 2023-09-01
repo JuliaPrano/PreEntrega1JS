@@ -54,24 +54,31 @@ if (respuesta === 'si') {
     const resultado = AhorrarSueldo(sueldoMensual, porcentajeParaAhorrar)
     alert("$" + resultado + " es lo que podrías ahorrar de tu sueldo")
 }
- else if (respuesta === "no") {
+else if (respuesta === "no") {
     alert(';)');
 }
 else {
     alert("error");
 }
 
+// ----------------------
+class Mandado {
+    constructor(ingreso, destino) {
+      this.ingreso = ingreso
+      this.destino = destino
+    }
+  }
+const listaMandados = []
+let totalMandados = 4
+
+for (let i = 0; i < totalMandados; i++) {
+    const ingreso = prompt("Igresar cada mandado por hacer")
+    const destino = parseFloat(prompt('Destino al que ir'))
+    const mand = new Mandado(ingreso, destino)
+    listaMandados.push(mand)
+}
+console.log(listaMandados.join("\n"))
 
 
-
-
-// const entrada4 = parseFloat(prompt("INGRESAR UN NUMERO"));
-// if ((entrada4 >= 0) && (entrada4 <= 1000)) {
-//     alert("PRESUPUESTO BAJO");
-// } else if ((entrada4 >= 1001) && (entrada4 <= 3000)) {
-//     alert("PRESUPUESTO MEDIO");
-// } else if (entrada4 > 3000) {
-//     alert("PRESUPUESTO ALTO");
-// } 
 
 alert('Gracias, disfruten nuestra web')
