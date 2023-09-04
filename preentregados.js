@@ -52,7 +52,7 @@ if (respuesta === 'si') {
     const sueldoMensual = parseFloat(prompt('ingrese su sueldo mensual'))
     const porcentajeParaAhorrar = parseFloat(prompt('ingrese el porcentaje que quiere'))
     const resultado = AhorrarSueldo(sueldoMensual, porcentajeParaAhorrar)
-    alert("$" + resultado + " es lo que podrías ahorrar de tu sueldo")
+    alert("$" + resultado + " es lo que podrías ahorrar de tu sueldo, quedando un $" + montoParaUsar + " para tus necesidades")
 }
 else if (respuesta === "no") {
     alert(';)');
