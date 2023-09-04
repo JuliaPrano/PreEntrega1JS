@@ -4,22 +4,16 @@ function darLaBienvenida() {
     console.log("Bienvenido a Monica, tu agenda interactiva web");
 }
 // ---------------------------------
-function darComienzoAlaWeb() {
-    alert("Ingrese 4 actividades que deasea finalizar hoy")
-    alert("Empecemos!")
-}
-
 
 // uso de funcion de bienvenida
 darLaBienvenida()
-darComienzoAlaWeb()
-
 // -----------------------------------
 const listaDeActividades = []
-let cantidad = 4
+alert("Hagamos la lista de hoy!")
+let cantidad = parseInt(prompt("¿Cuantas actividades vamos a terminar hoy?"))
 
 for (let i = 0; i < cantidad; i++) {
-    const entrada = prompt("Ingresar de a una actividad")
+    const entrada = prompt("Ingrese una por una")
     listaDeActividades.push(entrada.toUpperCase())
     // console.log(listaNombres.length)
 }
@@ -27,7 +21,7 @@ alert(listaDeActividades.join("\n"))
 
 
 //    ciclo por conteo (exacto)
-const cantActividadesoXHacer = 4
+const cantActividadesoXHacer = cantidad
 let cantActividadesQYaHice = 0
 while (cantActividadesQYaHice < cantActividadesoXHacer) {
     alert('una actividad lista esta, vos podes con la siguiente!')
@@ -52,7 +46,7 @@ if (respuesta === 'si') {
     const sueldoMensual = parseFloat(prompt('ingrese su sueldo mensual'))
     const porcentajeParaAhorrar = parseFloat(prompt('ingrese el porcentaje que quiere'))
     const resultado = AhorrarSueldo(sueldoMensual, porcentajeParaAhorrar)
-    alert("$" + resultado + " es lo que podrías ahorrar de tu sueldo, quedando un $" + montoParaUsar + " para tus necesidades")
+    alert("$" + resultado + " es lo que podrías ahorrar de tu sueldo")
 }
 else if (respuesta === "no") {
     alert(';)');
@@ -69,16 +63,16 @@ class Mandado {
     }
   }
 const listaMandados = []
-let totalMandados = 4
+alert("Aquí puede ingresar destino y mandado por hacer")
+let totalMandados = parseInt(prompt("Cuantos mandados quiere ingresar?"))
 
 for (let i = 0; i < totalMandados; i++) {
-    const ingreso = prompt("Igresar cada mandado por hacer")
-    const destino = parseFloat(prompt('Destino al que ir'))
+    const ingreso = prompt("Igrese nuevo mandado por hacer")
+    const destino = parseFloat(prompt('Destino'))
     const mand = new Mandado(ingreso, destino)
     listaMandados.push(mand)
 }
 console.log(listaMandados.join("\n"))
-
 
 
 alert('Gracias, disfruten nuestra web')
